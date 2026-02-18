@@ -66,6 +66,22 @@
       background: rgba(0,0,0,0.5); /* lapisan gelap transparan */
       z-index: -1;
     }
+
+    .running-text {
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  box-sizing: border-box;
+  color: red;
+  font-size: 24px;
+  font-weight: bold;
+  animation: marquee 12s linear infinite;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
   </style>
 </head>
 <body>
@@ -90,8 +106,12 @@
       <tr><td><img src="monyet.gif" alt="Monyet">MONYET</td><td class="angka">11, 23, 35, 47, 59, 71, 83, 95</td></tr>
       <tr><td><img src="kambing.gif" alt="Kambing">KAMBING</td><td class="angka">12, 24, 36, 48, 60, 72, 84, 96</td></tr>
     </table>
+    <!-- Tambahan teks berjalan -->
+<div class="running-text">
+  🎉 Selamat Tahun Baru Imlek 2026 🎉 Gong Xi Fa Cai KOKO CIPUL 🎉
   </div>
 </body>
 
 </html>
+
 
