@@ -66,23 +66,6 @@
       background: rgba(0,0,0,0.5); /* lapisan gelap transparan */
       z-index: -1;
     }
-    /* Teks berjalan */
-    .running-text {
-      width: 100%;
-      white-space: nowrap;
-      overflow: hidden;
-      box-sizing: border-box;
-      color: gold;
-      font-size: 24px;
-      font-weight: bold;
-      text-shadow: 0 0 10px red, 0 0 20px orange;
-      animation: marquee 12s linear infinite;
-      margin-top: 20px;
-    }
-    @keyframes marquee {
-      0%   { transform: translateX(100%); }
-      100% { transform: translateX(-100%); }
-    }
   </style>
 </head>
 <body>
@@ -95,7 +78,7 @@
       <tr><td><img src="naga.gif" alt="Naga">NAGA</td><td class="angka">03, 15, 27, 39, 51, 63, 75, 87, 99</td></tr>
       <tr><td><img src="kelinci.gif" alt="Kelinci">KELINCI</td><td class="angka">04, 16, 28, 40, 52, 64, 76, 88, 00</td></tr>
       <tr><td><img src="harimau.gif" alt="Harimau">HARIMAU</td><td class="angka">05, 17, 29, 41, 53, 65, 77, 89</td></tr>
-      <tr><td><img src="kerbau.gif" alt="Kerbau">KERBAU</td><td class="angka">06, 18, 30, 42, 54, 66, 78, 90</td></tr>
+      <tr><td><img src="kerbau.gif" alt"Kerbau">KERBAU</td><td class="angka">06, 18, 30, 42, 54, 66, 78, 90</td></tr>
     </table>
 
     <!-- Tabel kanan -->
@@ -108,10 +91,7 @@
       <tr><td><img src="kambing.gif" alt="Kambing">KAMBING</td><td class="angka">12, 24, 36, 48, 60, 72, 84, 96</td></tr>
     </table>
   </div>
-
-  <!-- Tambahan teks berjalan -->
-  <div class="running-text">
-    🎉 Gong Xi Fa Cai 🎉KOKO CUNKOK CIPUL 🎉 🔴🟡
-  </div>
 </body>
+
 </html>
+
