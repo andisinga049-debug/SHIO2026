@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <title>Tabel Shio 2026</title>
+  <style>
+    body {
+      background-image: url("file:///C:/Users/PC%20-%201/Documents/SHIO.webp"); /* ganti dengan gambar latar kamu */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px red, 0 0 20px orange;
+      animation: blinkTitle 1.5s infinite alternate;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+    td {
+      border: 1px solid white;
+      padding: 8px 15px;
+    }
+    td img {
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 10px gold);
+      animation: blinkImg 2s infinite alternate;
+    }
+    /* Efek berkedip */
+    @keyframes blinkTitle {
+      from { opacity: 1; }
+      to { opacity: 0.3; }
+    }
+    @keyframes blinkCell {
+      0% { color: green; text-shadow: 0 0 10px red; }
+      50% { color: yellow; text-shadow: 0 0 20px lime; }
+      100% { color: cyan; text-shadow: 0 0 20px magenta; }
+    }
+    @keyframes blinkImg {
+      0% { filter: drop-shadow(0 0 10px red); }
+      50% { filter: drop-shadow(0 0 20px lime); }
+      100% { filter: drop-shadow(0 0 20px magenta); }
+    }
+    .angka {
+      animation: blinkCell 2s infinite alternate;
+    }
+    /* Overlay agar teks tetap jelas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5); /* lapisan gelap transparan */
+      z-index: -1;
+    }
+  </style>
+</head>
+<body>
+  <h1>TABEL SHIO 2026<br>(17 Feb 2026 - 05 Feb 2027)</h1>
+  <div class="container">
+    <!-- Tabel kiri -->
+    <table>
+      <tr><td><img src="kuda.gif" alt="Kuda">KUDA</td><td class="angka">01, 13, 25, 37, 49, 61, 73, 85, 97</td></tr>
+      <tr><td><img src="ular.gif" alt="Ular">ULAR</td><td class="angka">02, 14, 26, 38, 50, 62, 74, 86, 98</td></tr>
+      <tr><td><img src="naga.gif" alt="Naga">NAGA</td><td class="angka">03, 15, 27, 39, 51, 63, 75, 87, 99</td></tr>
+      <tr><td><img src="kelinci.gif" alt="Kelinci">KELINCI</td><td class="angka">04, 16, 28, 40, 52, 64, 76, 88, 00</td></tr>
+      <tr><td><img src="harimau.gif" alt="Harimau">HARIMAU</td><td class="angka">05, 17, 29, 41, 53, 65, 77, 89</td></tr>
+      <tr><td><img src="ROOT/a%20bull%20with%20large%20horns%20is%20standing%20in%20the%20grass.gif" alt="Kerbau">KERBAU</td><td class="angka">06, 18, 30, 42, 54, 66, 78, 90</td></tr>
+    </table>
+
+    <!-- Tabel kanan -->
+    <table>
+      <tr><td><img src="tikus.gif" alt="Tikus">TIKUS</td><td class="angka">07, 19, 31, 43, 55, 67, 79, 91</td></tr>
+      <tr><td><img src="babi.gif" alt="Babi">BABI</td><td class="angka">08, 20, 32, 44, 56, 68, 80, 92</td></tr>
+      <tr><td><img src="anjing.gif" alt="Anjing">ANJING</td><td class="angka">09, 21, 33, 45, 57, 69, 81, 93</td></tr>
+      <tr><td><img src="ayam.gif" alt="Ayam">AYAM</td><td class="angka">10, 22, 34, 46, 58, 70, 82, 94</td></tr>
+      <tr><td><img src="monyet.gif" alt="Monyet">MONYET</td><td class="angka">11, 23, 35, 47, 59, 71, 83, 95</td></tr>
+      <tr><td><img src="kambing.gif" alt="Kambing">KAMBING</td><td class="angka">12, 24, 36, 48, 60, 72, 84, 96</td></tr>
+    </table>
+  </div>
+</body>
+</html>
