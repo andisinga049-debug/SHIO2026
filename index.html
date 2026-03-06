@@ -83,6 +83,23 @@
       0%   { transform: translateX(100%); }
       100% { transform: translateX(-100%); }
     }
+
+    /* Efek kursor cahaya */
+    .cursor-effect {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle, gold, transparent);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      transform: translate(-50%, -50%);
+      animation: pulse 1.5s infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+      to { transform: scale(1.5) translate(-50%, -50%); opacity: 0.5; }
+    }
   </style>
 </head>
 <body>
@@ -111,9 +128,17 @@
 
   <!-- Tambahan teks berjalan -->
   <div class="running-text">
-    🎉 Gong Xi Fa Cai 🎉 KOKO CUNKOK CIPUL 🎉 🔴🟡
+    🎉 TETAP SEMANGAT KOKO CUNKOK CIPULKU 🎉 INGAT SANKSI 14 KITA 🎉 🔴🟡
   </div>
+
+  <!-- Efek kursor -->
+  <div class="cursor-effect" id="cursor"></div>
+  <script>
+    const cursor = document.getElementById("cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    });
+  </script>
 </body>
 </html>
-
-
