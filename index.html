@@ -1,148 +1,144 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>Shio & Mesin Poltar</title>
-<style>
-  body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
-  h1, h2 { text-align: center; }
+  <meta charset="UTF-8">
+  <title>Tabel Shio 2026</title>
+  <style>
+    body {
+      background-image: url(SHIO.webp); /* ganti dengan gambar latar kamu */
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      color: white;
+      font-family: Arial, sans-serif;
+      text-align: center;
+    }
+    h1 {
+      color: gold;
+      text-shadow: 0 0 10px red, 0 0 20px orange;
+      animation: blinkTitle 1.0s infinite alternate;
+    }
+    .container {
+      display: flex;
+      justify-content: center;
+      gap: 40px;
+      margin-top: 20px;
+    }
+    table {
+      border-collapse: collapse;
+      font-size: 18px;
+    }
+    td {
+      border: 1px solid white;
+      padding: 8px 15px;
+    }
+    td img {
+      vertical-align: middle;
+      margin-right: 8px;
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 0 10px gold);
+      animation: blinkImg 2s infinite alternate;
+    }
+    /* Efek berkedip */
+    @keyframes blinkTitle {
+      from { opacity: 1; }
+      to { opacity: 0.3; }
+    }
+    @keyframes blinkCell {
+      0% { color: green; text-shadow: 0 0 10px red; }
+      50% { color: yellow; text-shadow: 0 0 20px lime; }
+      100% { color: cyan; text-shadow: 0 0 20px magenta; }
+    }
+    @keyframes blinkImg {
+      0% { filter: drop-shadow(0 0 10px red); }
+      50% { filter: drop-shadow(0 0 20px lime); }
+      100% { filter: drop-shadow(0 0 20px magenta); }
+    }
+    .angka {
+      animation: blinkCell 2s infinite alternate;
+    }
+    /* Overlay agar teks tetap jelas */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.5); /* lapisan gelap transparan */
+      z-index: -1;
+    }
+    /* Teks berjalan */
+    .running-text {
+      width: 100%;
+      white-space: nowrap;
+      overflow: hidden;
+      box-sizing: border-box;
+      color: gold;
+      font-size: 24px;
+      font-weight: bold;
+      text-shadow: 0 0 10px red, 0 0 20px orange;
+      animation: marquee 12s linear infinite;
+      margin-top: 20px;
+    }
+    @keyframes marquee {
+      0%   { transform: translateX(100%); }
+      100% { transform: translateX(-100%); }
+    }
 
-  /* Style Tab */
-  .tab {
-    overflow: hidden;
-    background: #333;
-  }
-  .tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 20px;
-    transition: 0.3s;
-    font-size: 16px;
-    color: white;
-  }
-  .tab button:hover {
-    background-color: #555;
-  }
-  .tab button.active {
-    background-color: #4CAF50;
-    color: white;
-  }
-  .tabcontent {
-    display: none;
-    padding: 20px;
-    animation: fadeEffect 0.5s;
-  }
-  @keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
-  }
-
-  /* Tabel */
-  table { width: 100%; border-collapse: collapse; margin-top: 15px; }
-  th, td { border: 1px solid #ccc; padding: 6px; text-align: center; }
-  th { background: #4CAF50; color: white; }
-  tr:nth-child(even) { background: #f2f2f2; }
-  .total { margin-top: 10px; font-weight: bold; color: red; }
-</style>
+    /* Efek kursor cahaya */
+    .cursor-effect {
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle, gold, transparent);
+      pointer-events: none;
+      mix-blend-mode: screen;
+      transform: translate(-50%, -50%);
+      animation: pulse 1.5s infinite alternate;
+    }
+    @keyframes pulse {
+      from { transform: scale(1) translate(-50%, -50%); opacity: 1; }
+      to { transform: scale(1.5) translate(-50%, -50%); opacity: 0.5; }
+    }
+  </style>
 </head>
 <body>
-
-<h1>📊 Shio 2026 & Mesin Poltar 🎰</h1>
-
-<!-- Tab Navigasi -->
-<div class="tab">
-  <button class="tablinks" onclick="openTab(event, 'Shio')" id="defaultOpen">Tabel Shio 2026</button>
-  <button class="tablinks" onclick="openTab(event, 'Poltar')">Mesin Poltar</button>
-</div>
-
-<!-- Konten Tab Shio -->
-<div id="Shio" class="tabcontent">
-  <h2>TABEL SHIO 2026<br>(17 Feb 2026 - 05 Feb 2027)</h2>
+  <h1>TABEL SHIO 2026<br>(17 Feb 2026 - 05 Feb 2027)</h1>
   <div class="container">
+    <!-- Tabel kiri -->
     <table>
-      <tr><td>Kuda</td><td>01, 13, 25, 37, 49, 61, 73, 85, 97</td></tr>
-      <tr><td>Ular</td><td>02, 14, 26, 38, 50, 62, 74, 86, 98</td></tr>
-      <tr><td>Naga</td><td>03, 15, 27, 39, 51, 63, 75, 87, 99</td></tr>
-      <tr><td>Kelinci</td><td>04, 16, 28, 40, 52, 64, 76, 88, 00</td></tr>
-      <tr><td>Harimau</td><td>05, 17, 29, 41, 53, 65, 77, 89</td></tr>
-      <tr><td>Kerbau</td><td>06, 18, 30, 42, 54, 66, 78, 90</td></tr>
-      <tr><td>Tikus</td><td>07, 19, 31, 43, 55, 67, 79, 91</td></tr>
-      <tr><td>Babi</td><td>08, 20, 32, 44, 56, 68, 80, 92</td></tr>
-      <tr><td>Anjing</td><td>09, 21, 33, 45, 57, 69, 81, 93</td></tr>
-      <tr><td>Ayam</td><td>10, 22, 34, 46, 58, 70, 82, 94</td></tr>
-      <tr><td>Monyet</td><td>11, 23, 35, 47, 59, 71, 83, 95</td></tr>
-      <tr><td>Kambing</td><td>12, 24, 36, 48, 60, 72, 84, 96</td></tr>
+      <tr><td><img src="kuda.gif" alt="Kuda">KUDA</td><td class="angka">01, 13, 25, 37, 49, 61, 73, 85, 97</td></tr>
+      <tr><td><img src="ular.gif" alt="Ular">ULAR</td><td class="angka">02, 14, 26, 38, 50, 62, 74, 86, 98</td></tr>
+      <tr><td><img src="naga.gif" alt="Naga">NAGA</td><td class="angka">03, 15, 27, 39, 51, 63, 75, 87, 99</td></tr>
+      <tr><td><img src="kelinci.gif" alt="Kelinci">KELINCI</td><td class="angka">04, 16, 28, 40, 52, 64, 76, 88, 00</td></tr>
+      <tr><td><img src="harimau.gif" alt="Harimau">HARIMAU</td><td class="angka">05, 17, 29, 41, 53, 65, 77, 89</td></tr>
+      <tr><td><img src="kerbau.gif" alt="Kerbau">KERBAU</td><td class="angka">06, 18, 30, 42, 54, 66, 78, 90</td></tr>
+    </table>
+
+    <!-- Tabel kanan -->
+    <table>
+      <tr><td><img src="tikus.gif" alt="Tikus">TIKUS</td><td class="angka">07, 19, 31, 43, 55, 67, 79, 91</td></tr>
+      <tr><td><img src="babi.gif" alt="Babi">BABI</td><td class="angka">08, 20, 32, 44, 56, 68, 80, 92</td></tr>
+      <tr><td><img src="anjing.gif" alt="Anjing">ANJING</td><td class="angka">09, 21, 33, 45, 57, 69, 81, 93</td></tr>
+      <tr><td><img src="ayam.gif" alt="Ayam">AYAM</td><td class="angka">10, 22, 34, 46, 58, 70, 82, 94</td></tr>
+      <tr><td><img src="monyet.gif" alt="Monyet">MONYET</td><td class="angka">11, 23, 35, 47, 59, 71, 83, 95</td></tr>
+      <tr><td><img src="kambing.gif" alt="Kambing">KAMBING</td><td class="angka">12, 24, 36, 48, 60, 72, 84, 96</td></tr>
     </table>
   </div>
-</div>
 
-<!-- Konten Tab Poltar -->
-<div id="Poltar" class="tabcontent">
-  <h2>MESIN POLTAR</h2>
-  <label>
-    Angka Tarung Dalam:
-    <input type="text" id="angka" placeholder="Contoh: 125,456,850 atau 1327,8501,4750,8569">
-  </label>
-  <input onclick="GenerateCustom()" type="button" value="Generate">
-  <input onclick="ClearAll()" type="button" value="Bersihkan">
-  <div id="hasil">Hasil kombinasi akan muncul di sini...</div>
-</div>
+  <!-- Tambahan teks berjalan -->
+  <div class="running-text">
+    🎉 TETAP SEMANGAT KOKO CUNKOK CIPULKU 🎉 INGAT SANKSI 14 KITA 🎉 🔴🟡
+  </div>
 
-<script>
-function openTab(evt, tabName) {
-  var i, tabcontent, tablinks;
-  tabcontent = document.getElementsByClassName("tabcontent");
-  for (i = 0; i < tabcontent.length; i++) {
-    tabcontent[i].style.display = "none";
-  }
-  tablinks = document.getElementsByClassName("tablinks");
-  for (i = 0; i < tablinks.length; i++) {
-    tablinks[i].className = tablinks[i].className.replace(" active", "");
-  }
-  document.getElementById(tabName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
-document.getElementById("defaultOpen").click();
-
-function GenerateCustom() {
-  const angkaInput = document.getElementById('angka').value;
-  const hasil = document.getElementById('hasil');
-  const blokArr = angkaInput.split(',').map(a => a.trim()).filter(a => a);
-
-  if (blokArr.length < 2) {
-    hasil.innerHTML = "Minimal masukkan 2 blok angka.";
-    return;
-  }
-
-  let output = [];
-  function combineRecursive(bloks, pos = 0, prefix = "") {
-    if (pos === bloks.length) {
-      output.push(prefix);
-      return;
-    }
-    for (let i = 0; i < bloks[pos].length; i++) {
-      combineRecursive(bloks, pos + 1, prefix + bloks[pos][i]);
-    }
-  }
-  combineRecursive(blokArr);
-  output = [...new Set(output)];
-
-  let tableHTML = `<table><tr><th>No</th><th>Kombinasi</th></tr>`;
-  output.forEach((komb, idx) => {
-    tableHTML += `<tr><td>${idx + 1}</td><td>${komb}</td></tr>`;
-  });
-  tableHTML += `</table><div class="total">Total Kombinasi: ${output.length}</div>`;
-  hasil.innerHTML = tableHTML;
-}
-
-function ClearAll() {
-  document.getElementById('angka').value = '';
-  document.getElementById('hasil').innerHTML = 'Hasil kombinasi akan muncul di sini...';
-}
-</script>
-
+  <!-- Efek kursor -->
+  <div class="cursor-effect" id="cursor"></div>
+  <script>
+    const cursor = document.getElementById("cursor");
+    document.addEventListener("mousemove", e => {
+      cursor.style.left = e.pageX + "px";
+      cursor.style.top = e.pageY + "px";
+    });
+  </script>
 </body>
 </html>
